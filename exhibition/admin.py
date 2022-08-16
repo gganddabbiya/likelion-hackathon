@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import exhibition
+from .models import Exhibition
 
-admin.site.register(exhibition)
+admin.site.register(Exhibition)
