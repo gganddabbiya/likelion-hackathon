@@ -1,6 +1,6 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import festival
+from .models import Festival
 
-admin.site.register(festival)
+admin.site.register(Festival)
