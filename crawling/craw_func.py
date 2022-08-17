@@ -1,8 +1,12 @@
+
 from datetime import datetime
 from difflib import SequenceMatcher
 
+import sys
 import os
 import django
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "woa_prj.settings")
 django.setup()

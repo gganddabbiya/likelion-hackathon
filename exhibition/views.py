@@ -10,7 +10,6 @@ def exhibition_list(request):
     # default 정렬 방식, 마감이 임박한 순으로 정렬
     if order == "endDate" or order is None:
         exhibition_list = Exhibition.objects.all().order_by('ex_endDate')
-    # 제목을 기준으로 사전순 정렬
     elif order == "title":
         exhibition_list = Exhibition.objects.all().order_by('ex_title')
     # 최근에 업데이트 된 순서로 정렬
@@ -46,7 +45,7 @@ def exhibition_list(request):
     page = request.GET.get("page")
     exhibition_list = paginator.get_page(page)
 
-    return render(request, "exhibitionList_sample.html",
+    return render(request, "exhibitions/exhibitionList.html",
                   {"exhibition_list": exhibition_list, "page": page})
 
 
