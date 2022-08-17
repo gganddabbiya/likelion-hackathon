@@ -12,7 +12,7 @@ from exhibition.models import Exhibition
 
 
 def parse_date(string_date, dict, split):
-    string_list =string_date.split(split)
+    string_list = string_date.split(split)
     date_format = "%Y.%m.%d"
     start_date = datetime.strptime(string_list[0].strip(), date_format).date()
     if len(string_list) == 1:

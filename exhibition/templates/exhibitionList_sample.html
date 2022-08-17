@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid #444444;
+      }
+      th, td {
+        border: 1px solid #444444;
+      }
+    </style>
+</head>
+<body>
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="60%" >제목</th>
+                        <th>시작일</th>
+                        <th>종료일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for exhibition in exhibition_list %}
+                <tr>
+                    <td>{{exhibition.ex_title}}</td>
+                    <td>{{exhibition.ex_startDate}}</td>
+                    <td>{{exhibition.ex_endDate}}</td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

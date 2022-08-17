@@ -24,7 +24,7 @@ if __name__ == '__main__':
     melon.festival(driver)
     melon.exhibition(driver)
 
-
+    driver.close()
 
 
 
