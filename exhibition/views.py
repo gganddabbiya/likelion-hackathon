@@ -41,11 +41,9 @@ def exhibition_list(request):
         # lte는 less than or equal, 작거나 같은 조건입니다.
         exhibition_list = exhibition_list.filter(ex_startDate__lte=endDate)
 
-
+    #페이지네이션, url에 page key를 넘기지 않았을 때는 자동으로 1페이지를 보여줍니다.
     paginator = Paginator(exhibition_list, 12)
-
     page = request.GET.get("page")
-
     exhibition_list = paginator.get_page(page)
 
     return render(request, "exhibitionList_sample.html",
