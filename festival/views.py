@@ -9,17 +9,18 @@ def festival_list(request):
     # 정렬 방식
     order = request.GET.get("order")
     # default 정렬 방식, 마감이 임박한 순으로 정렬
-    if order == "endDate" or order is None:
-        festival_list = Festival.objects.all().order_by('fe_endDate')
+    if order == "recent":
+        festival_list = Festival.objects.all().order_by('-pk')
+    # 제목을 기준으로 사전 순서로 정렬
     elif order == "title":
         festival_list = Festival.objects.all().order_by('fe_title')
     # 최근에 업데이트 된 순서로 정렬
-    else:  # order == "recent_added":
-        festival_list = Festival.objects.all().order_by('-pk')
+    else:  # order == "endDate" or order is None:
+        festival_list = Festival.objects.all().order_by('fe_endDate')
 
     # 검색어 필터
     title = request.GET.get("title")
-    # title이 word를 포함하고 있는 전시들을 반환
+    # title이 word를 포함하고 있는 축제들을 반환
     if title is not None:
         festival_list = festival_list.filter(fe_title__contains=title)
 
@@ -27,7 +28,7 @@ def festival_list(request):
 
     # 시작일 필터
     start_date_string = request.GET.get("startDate")
-    # 검색한 시작일 이후에 시작하는 전시들을 반환
+    # 검색한 시작일 이후에 시작하는 축제들을 반환
     if start_date_string is not None:
         startDate = datetime.strptime(start_date_string, date_format).date()
         # gte는 greater than or equal, 크거나 같은 조건입니다.
@@ -35,7 +36,7 @@ def festival_list(request):
 
     # 종료일 필터
     end_date_string = request.GET.get("endDate")
-    # 검색한 종료일 이전에 끝나는 전시들을 반환
+    # 검색한 종료일 이전에 끝나는 축제들을 반환
     if end_date_string is not None:
         endDate = datetime.strptime(end_date_string, date_format).date()
         # lte는 less than or equal, 작거나 같은 조건입니다.
