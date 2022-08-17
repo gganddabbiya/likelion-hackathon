@@ -1,4 +1,4 @@
-from crawling.craw_func import festival_setdefault, exhibition_setdefault, festival_save, exhibition_save, duplicateCheck, parse_date
+from craw_func import festival_setdefault, exhibition_setdefault, festival_save, exhibition_save, duplicateCheck, parse_date
 
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
