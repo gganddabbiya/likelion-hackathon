@@ -51,3 +51,10 @@ def exhibition_list(request):
 
 
 # Create your views here.
+from django.shortcuts import get_object_or_404
+
+def exhibition_detail(request, pk):
+    # 특정 pk값을 가진 exhibiton 객체 가져오기
+    exhibition_detail = get_object_or_404(Exhibition, pk=pk)
+
+    return render(request, "exhibitions/exhibitionDetail_sample.html", {'exhibition_detail':exhibition_detail})
