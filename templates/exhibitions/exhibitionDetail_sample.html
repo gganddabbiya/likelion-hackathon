@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>{{exhibition_detail.ex_title}}</h2>
+    <img src="{{exhibition_detail.ex_image}}"/>
+    <div>
+        <tr>
+            <td>공연장소: {{exhibition_detail.ex_place}}</td><br/>
+            <td>공연기간: {{exhibition_detail.ex_startDate}} ~ {{exhibition_detail.ex_endDate}}</td><br/>
+            <td>공연시간: {{exhibition_detail.ex_timeinfo}}</td><br/>
+            <td>관람연령: {{exhibition_detail.ex_age}}</td><br/>
+        </tr>
+    </div>
+    링크공유:<br/>
+    <a href="{{exhibition_detail.ex_link}}">바로가기</a><br/>
+    상세정보<br/>
+    {% for image in exhibition_detail.ex_detail_img %}
+        <img src="{{image}}"/>
+    {% endfor %}
+</body>
+</html>

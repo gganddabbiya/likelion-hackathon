@@ -51,3 +51,10 @@ def festival_list(request):
                   {"festival_list": festival_list, "page": page, "order": order, "title": title})
 
 # Create your views here.
+from django.shortcuts import get_object_or_404
+
+def festival_detail(request,pk):
+    # 특정 pk값에 해당하는 festival 객체 가져오기
+    festival_detail = get_object_or_404(Festival, pk=pk)
+
+    return render(request, "festivals/festivalDetail.html", {'festival_detail':festival_detail})
