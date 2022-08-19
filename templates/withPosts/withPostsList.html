@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/ex.css">
+    <link rel="stylesheet" href="/css/community.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logoAndSearch">
+            <img id="logoImg" src="/img/WOA_LOGO.png" alt="LOGO">
+            
+            <div class="dropdown">
+                <select class="form-select-padding-2" id=inputGroupSelect04 aria-label="Example select with button addon">
+                    <option value="1">페스티벌</option>
+                    <option value="1">전시</option>
+                </select>                
+                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <div id="mainCategory">
+            <a href="main-page.html" style="text-decoration: none; color:#000000;"><span class="catogoryMain">HOME</span></a>
+            <a href="exhibition.html" style="text-decoration: none; color:#000000;"><span class="categoryExhibition">EXHIBITION</span></a>
+            <a href="festival.html" style="text-decoration: none; color:#000000;"><span class="categoryFestival">FESTIVAL</span></a>
+            <span class="categoryCategory" style="text-decoration:underline;  text-decoration-color:#21517D; text-decoration-thickness:3px;">COMMUNITY</span>
+        </div>
+    </header>
+
+    <div id="community">
+        <a href="" id="community" style="text-decoration:none; color:#000000;">COMMUNITY</p>     
+    </div>
+
+    <div id="category2">
+        <nav>
+            <ul class="nav-container2">
+                <li class="nav-item2"><a href="">전체</a></li>
+                <li class="nav-item2"><a href="">자유게시판</a></li>
+                <li class="nav-item2"><a href="">후기</a></li>
+                <li class="nav-item2"><a href=""style="color:#000000; text-decoration:none;">같이가요&해요</a></li>
+            </ul>         
+        </nav>   
+        <a id="write-btn" class="btn btn-primary" href="#" role="button">글쓰기</a>
+    </div>
+
+    <section class="main">
+        <h1 class="d-none">게시판</h1>
+            <div class="board">
+                <table class="table">
+                    <tbody class="tbody">
+                        <tr>
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                          
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                        
+                        </tr>  
+                         <tr>      
+                            <td></td>
+                            <td><a href=""style="color:#000000; text-decoration:none;">{{po_title}}</a></td>
+                            <td>{{po_user_id}}</td>
+                            <td>{{pi_time}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="page-wrap">
+                    <ul class="page-nation">
+                        <li><a href="/board/list?p=1">1</a></li>
+                        <li><a href="/board/list?p=2">2</a></li>
+                        <li><a href="/board/list?p=3">3</a></li>
+                        <li><a href="/board/list?p=4">4</a></li>
+                        <li><a href="/board/list?p=5">5</a></li>
+                        <li><a href="/board/list?p=5">6</a></li>
+                        <li><a href="/board/list?p=5">7</a></li>
+                        <li><a href="/board/list?p=5">8</a></li>
+                    </ul>
+                </div>
+            </div>
+      </section>
+  
+
+
+
+
+
+
+
+
+    <footer></footer>
+      
+</body>
+</html>
