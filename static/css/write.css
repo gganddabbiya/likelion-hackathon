@@ -1,0 +1,38 @@
+
+#title{
+    border-radius: 10px;
+    width:50vh;
+    height:3vw;
+    margin-bottom: 1%;
+}
+
+#content{
+    height:20vw;
+    width: 85vh;
+    border-radius: 10px;
+} 
+
+#button{
+    margin-left:43%;
+}
+
+#button button{
+    height: 4vh;
+    width: 8vw;
+    border-radius: 0px;
+    font-size:15px; 
+}
+
+.form-write{
+    padding-bottom: 3%;
+    margin-left:30%;
+
+}
+
+.row{
+    padding-bottom:3%;
+}
+
+.col{
+    margin-left:42%;
+}

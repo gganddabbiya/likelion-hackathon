@@ -59,6 +59,7 @@ ROOT_URLCONF = 'woa_prj.urls'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
