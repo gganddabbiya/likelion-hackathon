@@ -1,6 +1,7 @@
 
 
 
+
 .contentBox{
     width: 960px;
     margin: 0 auto;
@@ -8,10 +9,15 @@
 }
 
 .explainBox{
-    background-color: lightgray;
+
     width: 960px;
     height: 350px;
     margin-top: 10px;
+}
+.explainBox img{
+    width: 960px;
+    height: 360px;
+    object-fit: cover;
 }
 
 /* ---------------------------------------------------- */
