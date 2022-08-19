@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/festival_info.css">
+    <link rel="stylesheet" href="/css/exstival_info.css">
     <!-- 부트스트랩 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
@@ -32,10 +32,10 @@
             <li class="categoryCategory"><a href="#">COMMUNITY</a></li>
         </ul>
     </header>
-    <h4 class="exhibition_name">{{fe_title}}</h4>
+    <h4 class="exhibition_name">{{ exhibition_detail.ex_title}}</h4>
     <div class="exhibition_info">
         <div id="left">
-            <img src="{{ fe_img }}" style="width: 140px;">
+            <img src="{{ exhibition_detail.ex_image }}" style="width: 140px;">
         </div>
         <div id="mid">
             <ul class="info">
@@ -50,13 +50,13 @@
         </div>
         <div id="right">
             <ul class="info_detail">
-                <li id="place">{{ fe_place }}</li>
+                <li id="place">{{ exhibition_detail.ex_place }}</li>
                 <br />
-                <li id="period">{{ fe_startDate }} ~ {{ fe_endDate }}</li>  
+                <li id="period">{{ exhibition_detail.ex_startDate }} ~ {{ exhibition_detail.ex_endDate }}</li>
                 <br />
-                <li id="runtime">{{ fe_timeinfo }}</li>
+                <li id="runtime">{{ exhibition_detail.ex_timeinfo }}</li>
                 <br />
-                <li id="age">{{ fe_age }}</li>
+                <li id="age">{{ exhibition_detail.ex_age }}</li>
             </ul>
         </div>
     </div>
@@ -64,11 +64,13 @@
         <li id="talk_share"><img src="img/talk.png" alt="talk" style="width: 41.86px; height: 49.5px;"><a href="#">카톡 공유</a></li>
         <li id="mail_share"><img src="img/email.png" alt="mail" style="width: 34px; height: 34px;"><a href="#">메일 공유</a></li>
         <li id="link_share"><img src="img/hyperlink.png" alt="link" style="width: 39.2px; height: 39.2px;"><a href="#">링크 공유</a></li>
-        <li id="detail_web"><img src="img/web.png" alt="web" style="width: 39px; height: 39px;"><a href="{{ fe_link }}">바로 가기</a></li>
+        <li id="detail_web"><img src="img/web.png" alt="web" style="width: 39px; height: 39px;"><a href="{{ exhibition_detail.ex_link }}">바로 가기</a></li>
     </ul>
     <h5 class="detail_info">상세정보</h5>
     <div class="detail_img">
-        <img src="img/detail.png" alt="detail img" style="width: 600px; height: 300px;">
+        {% for detail in exhibition_detail.ex_detail_img %}
+            <img src={{ detail }} alt="detailimg">
+        {% endfor %}
     </div>
     <footer>
         <div>by. 멋쟁이 사자처럼 상명대학교 아기사자들</div>

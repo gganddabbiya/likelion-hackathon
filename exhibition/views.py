@@ -46,7 +46,7 @@ def exhibition_list(request):
     page = request.GET.get("page")
     exhibition_list = paginator.get_page(page)
 
-    return render(request, "exhibitions/exhibitionList.html",
+    return render(request, "exhibitions/exhibitionList_sample.html",
                   {"exhibition_list": exhibition_list, "page": page})
 
 
@@ -55,6 +55,8 @@ from django.shortcuts import get_object_or_404
 
 def exhibition_detail(request, pk):
     # 특정 pk값을 가진 exhibiton 객체 가져오기
-    exhibition_detail = get_object_or_404(Exhibition, pk=pk)
+    # exhibition_detail = get_object_or_404(Exhibition, pk=pk)
+    exhibition_detail = Exhibition.objects.get(pk=pk)
+    print(exhibition_detail)
 
-    return render(request, "exhibitions/exhibitionDetail_sample.html", {'exhibition_detail':exhibition_detail})
+    return render(request, "exhibitions/exhibitionDetail.html", {'exhibition_detail': exhibition_detail})
