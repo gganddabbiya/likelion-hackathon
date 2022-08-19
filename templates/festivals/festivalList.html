@@ -1,0 +1,184 @@
+<!-- festival.html과 변수명 제외 동일합니다 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/festivalList.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <!-- 달력 부트스트랩 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logoAndSearch">
+            <img id="logoImg" src="{% static 'img/WOA_LOGO.png' %}" alt="LOGO">
+            
+            <div class="dropdown">
+                <select class="form-select-padding-2" id=inputGroupSelect04 aria-label="Example select with button addon">
+                    <option value="1">페스티벌</option>
+                    <option value="1">전시</option>
+                </select>
+                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            </div>
+
+            
+        </div>
+        <div id="festivalCategory">
+            <a href="index.html" style="text-decoration: none; color:rgb(30, 70, 142);"><span class="catogoryMain">HOME</span></a>
+            <a href="exhibitionList.html" style="text-decoration: none; color:rgb(30, 70, 142);"><span class="categoryExhibition">EXHIBITION</span></a>
+            <a href="festivalList.html" style="text-decoration: none; color:rgb(30, 70, 142);"><span class="categoryFestival">FESTIVAL</span></a>
+            <span class="categoryCategory">COMMUNITY</span>
+        </div>
+    </header>
+    <div class="festivalContent">
+        <h2>FESTIVAL</h2>
+        <div class="festivalNavBar">
+            <span class="festivalNavBar-1">공연 종료 임박순</span>
+            <span class="festivalNavBar-2">가나다순</span>
+            <span class="festivalNavBar-3">등록순</span>
+            <div class="festivalDateSearch">
+                <i class="bi bi-calendar"></i>
+                <!-- 달력부트스트랩  flex-row d-flex justify-content-center-->
+                <div class="container">
+                    <form autocomplete="off">
+                      <div class="">
+                        <div class="calendarInputGruop">
+                          <div class="input-group input-daterange">
+                            
+                            <input id="calendarInput" type="text" name="daterange" value="" readonly />
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="festivalMenu">
+                
+            <div class="festivalMenu-1">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴1">
+                <span class="festivalMenu-name1">{{ fe_name }}</span>
+                <span class="festivalMenu-date1">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location1">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-2">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴2">
+                <span class="festivalMenu-name2">{{ fe_name }}</span>
+                <span class="festivalMenu-date2">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location2">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-3">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴3">
+                <span class="festivalMenu-name3">{{ fe_name }}</span>
+                <span class="festivalMenu-date3">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location3">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-4">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴4">
+                <span class="festivalMenu-name4">{{ fe_name }}</span>
+                <span class="festivalMenu-date4">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalManu-location4">{{ fe_place }}</span>
+            </div>
+        </div>
+
+        <div class="festivalMenu">
+                
+            <div class="festivalMenu-1">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴1">
+                <span class="festivalMenu-name1">{{ fe_name }}</span>
+                <span class="festivalMenu-date1">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location1">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-2">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴2">
+                <span class="festivalMenu-name2">{{ fe_name }}</span>
+                <span class="festivalMenu-date2">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location2">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-3">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴3">
+                <span class="festivalMenu-name3">{{ fe_name }}</span>
+                <span class="festivalMenu-date3">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location3">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-4">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴4">
+                <span class="festivalMenu-name4">{{ fe_name }}</span>
+                <span class="festivalMenu-date4">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalManu-location4">{{ fe_place }}</span>
+            </div>
+        </div>
+
+        <div class="festivalMenu" style="border: none;">
+                
+            <div class="festivalMenu-1">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴1">
+                <span class="festivalMenu-name1">{{ fe_name }}</span>
+                <span class="festivalMenu-date1">{{ fe_startDate } ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location1">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-2">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴2">
+                <span class="festivalMenu-name2">{{ fe_name }}</span>
+                <span class="festivalMenu-date2">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location2">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-3">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴3">
+                <span class="festivalMenu-name3">{{ fe_name }}</span>
+                <span class="festivalMenu-date3">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalMenu-location3">{{ fe_place }}</span>
+            </div>
+            <div class="festivalMenu-4">
+                <img src="{{ fe_img }}" alt="공연이미지-메뉴4">
+                <span class="festivalMenu-name4">{{ fe_name }}</span>
+                <span class="festivalMenu-date4">{{ fe_startDate }} ~ {{ fe_endDate }}</span>
+                <span class="festivalManu-location4">{{ fe_place }}</span>
+            </div>
+        </div>
+
+        
+        
+
+    </div>
+
+    <div class="page-wrap">
+        <ul class="page-nation">
+            <li onclick="movePage(1)">1</li>
+            <li onclick="movePage(2)">2</li>
+            <li onclick="movePage(3)">3</li>
+            <li onclick="movePage(4)">4</li>
+            <li onclick="movePage(5)">5</li>
+            <li onclick="movePage(6)">6</li>
+            <li onclick="movePage(7)">7</li>
+            <li onclick="movePage(8)">8</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div>by.멋쟁이 사자처럼 상명대학교 아기사자들</div>
+    </footer>
+
+    <script src="{% static js/calendar.js %}"></script>
+    <script src="{% static js/festivarArray.js %}"></script>
+    <script src="{% static js/urlChange.js %}"></script>
+</body>
+</html>
