@@ -1,0 +1,74 @@
+
+
+
+.contentBox{
+    width: 960px;
+    margin: 0 auto;
+
+}
+
+.explainBox{
+    background-color: lightgray;
+    width: 960px;
+    height: 350px;
+    margin-top: 10px;
+}
+
+/* ---------------------------------------------------- */
+
+.mainContentTitle{
+    padding-bottom: 10px;
+}
+
+.secondContentBox{
+    text-align: center;
+    word-spacing: 377px;
+    padding-top: 10px;
+
+
+}
+
+.secondContentBox img{
+    background-color: gray;
+    width: 200px;
+    height: 250px;
+
+}
+
+.exhibitionMain-1,.exhibitionMain-2,.festivalMain-1,.festivalMain-2{
+    width: 240px;
+    cursor: pointer;
+}
+
+.exhibitionMain, .festivalMain, .verticalLine{
+    display: flex;
+    /* width: 27.5vw; */
+}
+.festivalMain{
+    flex: 1;
+}
+
+.mainContent {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.mainContent span{
+    font-size: 15px;
+}
+
+.exhibitionMain-name1,.exhibitionMain-name2,.festivalnMain-name1,.festivalnMain-name2{
+    font-weight: bold;
+}
+/* .exhibitionMain-1, .exhibitionMain-2,.festivalMain-1,.festivalMain-2{
+    width: 200px;
+} */
+
+
+
+.verticalLine{
+    border-left: 2px solid #21517D;
+    width: 1px;
+    height: 250px;
+    
+}
