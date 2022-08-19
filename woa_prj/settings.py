@@ -40,10 +40,13 @@ INSTALLED_APPS = [
     'festival',
     'exhibition',
     'post',
+<<<<<<< Updated upstream
 
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+=======
+>>>>>>> Stashed changes
 ]
 
 MIDDLEWARE = [
