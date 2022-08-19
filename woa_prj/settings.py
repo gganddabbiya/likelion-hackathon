@@ -40,9 +40,7 @@ INSTALLED_APPS = [
     'festival',
     'exhibition',
     'post',
-
     'mathfilters',
-
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -61,6 +59,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'woa_prj.urls'
 
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 TEMPLATES = [
     {

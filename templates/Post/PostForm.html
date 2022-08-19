@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/ex.css' %}">
+    <link rel="stylesheet" href="{% static 'css/community.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/write.css' %}">
+    <link rel="stylesheet" href="{% static 'css/popup.css' %}">
+    <!-- 부트스트랩 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!--뒤로가기 팝업-->
+    
+</head>
+<body>
+    <header>
+        <div id="logoAndSearch">
+            <img id="logoImg" src="{% static 'img/WOA_LOGO.png' %}" alt="LOGO">     
+            <div class="dropdown">
+                <select class="form-select-padding-2" id=inputGroupSelect04 aria-label="Example select with button addon">
+                    <option value="1">페스티벌</option>
+                    <option value="1">전시</option>
+                </select>                
+                <input type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+            </div>
+        </div>
+        <div id="mainCategory">
+            <a href=""style="text-decoration: none; color:#000000;"><span class="catogoryMain">HOME</span></a>
+            <a href="{{ }}" style="text-decoration: none; color:#000000;"><span class="categoryExhibition">EXHIBITION</span></a>
+            <a href="{% url %}" style="text-decoration: none; color:#000000;"><span class="categoryFestival">FESTIVAL</span></a>
+            <span class="categoryCategory" style="text-decoration:underline;  text-decoration-color:#21517D; text-decoration-thickness:3px;">COMMUNITY</span>
+        </div>
+    </header>
+
+    <div id="community">
+        <a href="" id="community" style="text-decoration:none; color:#000000;">COMMUNITY</p>     
+    </div>
+
+    <div id="category2">
+        <nav>
+            <ul class="nav-container2">
+                <li class="nav-item2"><a href=""style="color:#000000; text-decoration:none;">전체</a></li>
+                <li class="nav-item2"><a href="{{ freeposts_list }}">자유게시판</a></li>
+                <li class="nav-item2"><a href="{{ reviewposts_list }}">후기</a></li>
+                <li class="nav-item2"><a href="{{ withpost_list }}">같이가요&해요</a></li>
+            </ul>         
+        </nav>   
+    </div>
+
+    <div id="form">
+        <form action="" method="post">
+            <div class="form-write">
+               <div class="form-group">
+                    <input type="text" class="form-control" id="title" placeholder="제목 입력(4-100)" name="title" maxlength="100" required="required" pattern=".{4,100}">
+                </div>
+                <div class="form-group2">
+                    <textarea class="form-control" rows="5" id="content"name="content" placeholder="내용 작성" required="required"></textarea>
+                </div>  
+            </div>  
+            <div class="row">
+                <div class="col">
+                    <label for="name"><input type="text" class="form-control" placeholder="닉네임" aria-label="닉네임" required="required">{{po_user_id}}</label>
+                    <label for="password"><input type="text" class="form-control" placeholder="비밀번호" aria-label="비밀번호" required="required">{{po_user_pass}}</label>
+                </div>
+            </div>
+            <div id="button">
+                <button type="button" class="btn btn-default" id="back-btn" style="background-color: #696969; color:white; margin-right:2%;">뒤로가기</button>
+                <input type="submit" class="btn btn-default2" style="color:white; background-color: #21517D;">업로드</button>
+            </div> 
+        </form>      
+    </div>
+
+    <!--모달-->
+    <div id="modal" class="modal-overlay" style="display:none;">
+        <div class="modal-window">
+            <div class="content">
+                <p>작성글을 삭제하시겠습니까?</p>                 
+            </div>
+            <div class="modal-btn">
+                <button type="button" class="btn1">예</button>
+                <button type="button" class="btn2">아니요</button>
+            </div>
+            
+        </div>
+    </div>   
+
+
+
+    <footer></footer>
+    <script>
+        const modal=document.getElementById("modal");
+
+        document.getElementById("back-btn").addEventListener('click',function(){
+            modal.style.display = "flex"
+        });
+
+        function modalOff() {
+            modal.style.display = "none";
+        }
+
+        var btn2= document.getElementsByClassName("btn2")
+        btn2[0].addEventListener('click',modalOff);
+
+    </script>  
+</body>
+</html>
+
+
+
+
+
+
