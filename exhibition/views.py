@@ -46,7 +46,7 @@ def exhibition_list(request):
     page = request.GET.get("page")
     exhibition_list = paginator.get_page(page)
 
-    return render(request, "exhibitions/exhibitionList_sample.html",
+    return render(request, "exhibitions/exhibitionList.html",
                   {"exhibition_list": exhibition_list, "page": page})
 
 
