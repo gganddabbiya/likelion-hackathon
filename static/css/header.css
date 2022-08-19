@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> upstream/main
 header{
     /* 헤더 상단 고정 
     position: fixed;
@@ -7,6 +10,13 @@ header{
      margin-top: 1%; 
 } 
 .dropdown {
+<<<<<<< HEAD
+    display: inline;
+}
+
+#category {
+    background-color: rgb(30, 70, 142);
+=======
     display: inline-flex;
     /* margin-left: 5%; */
     margin-top: 1%;
@@ -18,10 +28,23 @@ header{
 
 #mainCategory {
     background-color: #21517D;
+>>>>>>> upstream/main
     color: white;
     padding: 0.5%;
     text-align: center;
     word-spacing: 6vw;
+<<<<<<< HEAD
+}
+
+#category span {
+    cursor: pointer;
+    font-size: larger;
+}
+
+#category span:hover{
+    color: rgb(196, 193, 193);
+}
+=======
 
     font-size: 16px;
     font-weight: bold;
@@ -33,6 +56,7 @@ header{
     cursor: pointer;
 }
 
+>>>>>>> upstream/main
 
 #logoAndSearch {
     padding-bottom: 0.5%;
@@ -40,9 +64,21 @@ header{
     
 }
 
+<<<<<<< HEAD
+#searchBarInput {
+    width: 35%;
+    height: 4vh;
+    text-align: center;
+    vertical-align: middle;
+}
+=======
+>>>>>>> upstream/main
 
 
 #logoImg {
     width: 100px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> upstream/main
 }
