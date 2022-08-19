@@ -1,0 +1,179 @@
+/* exhibition header category!! */
+#exhibitionCategory{
+    color:#21517D;
+    padding: 0.5%;
+    text-align: center;
+    word-spacing: 6vw;
+    font-weight: bold;
+}
+#exhibitionCategory span{
+    cursor: pointer;
+}
+/* =---------------------------- */
+.exhibitionNavBar{
+    height: 35px;
+}
+.exhibitionNavBar span{
+    cursor: pointer;
+}
+.exhibitionNavBar-1{
+    font-weight: bold;
+}
+.exhibitionNavBar-2{
+    color: gray;
+    /* border-bottom: 1px solid gray; */
+}
+.exhibitionNavBar-3{
+    color: gray;
+    /* border-bottom: 1px solid gray; */
+}
+
+
+.exhibitionMenu{
+    display: flex;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #21517D;
+}
+.exhibitionMenu span{
+    display: block;
+}
+.exhibitionMenu img {
+    background-color: gray;
+    width: 200px;
+    height: 250px;
+}
+
+.categoryExhibition{
+    padding-bottom: 7px;
+    border-bottom: 5px solid #21517D;
+}
+
+.exhibitionContent{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.exhibitionContent h2{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.exhibitionDateSearch{
+    display: flex;
+    float: right;
+}
+
+.exhibitionMenu-name1,.exhibitionMenu-name2,.exhibitionMenu-name3,.exhibitionMenu-name4{
+    font-weight: bold;
+}
+
+.exhibitionMenu-1,.exhibitionMenu-2,.exhibitionMenu-3,.exhibitionMenu-4{
+    width: 240px;
+    height: 300px;
+    cursor: pointer;
+}
+
+
+/* ------------------달력부트스트랩 CSS------------------------ */
+
+
+.container form {
+    width: 200px;
+}
+
+/* label {
+    font-size: 18px;
+}
+   */
+#calendarInput {
+      padding: 5px 10px !important;
+      border: 1px solid #CFD8DC !important;
+      border-radius: 4px !important;
+      box-sizing: border-box;
+      background-color: #fff !important;
+      color: #000 !important;
+      font-size: 13px !important;
+      letter-spacing: 1px;
+      position: relative;
+      width: 100%;
+}
+  
+#calendarInput:focus {
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      border: 1px solid #FFA000 !important;
+      outline-width: 0;
+}
+  
+.daterangepicker {
+    background-color: #fff;
+    border-radius: 0 !important;
+    align-content: center !important;
+    padding: 0 !important;
+}
+  
+  /*Weekday Heading*/
+thead tr:nth-child(2) {
+    color: #BDBDBD !important;
+}
+  
+tbody tr td {
+    padding: 5px 7px !important;
+}
+
+.month {
+    font-size: 16px !important;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
+  
+.start-date, .end-date {
+    border-radius: 0px !important;
+}
+  
+.available:hover {
+    border-radius: 0px !important;
+}
+  
+.off {
+    color: #EEEEEE !important;
+}
+  
+.off:hover {
+    background-color: #EEEEEE !important;
+    color: #fff !important;
+}
+  
+.drp-buttons {
+    display: none !important;
+}
+
+
+/* 부트스트랩 페이지네이션 */
+.pagination{
+    justify-content: center;
+    margin: 20px;
+}
+
+.page-link {
+    color: #21517D; 
+    background-color: none;
+    border: none; 
+  }
+
+
+.page-nation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    list-style: none;
+}
+.page-nation li{
+    font-size: 20px;
+    cursor: pointer;
+}

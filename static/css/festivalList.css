@@ -1,0 +1,168 @@
+/* festival header category!! */
+#festivalCategory{
+    color:#21517D;
+    padding: 0.5%;
+    text-align: center;
+    word-spacing: 6vw;
+    font-weight: bold;
+}
+#festivalCategory span{
+    cursor: pointer;
+}
+/* =---------------------------- */
+.festivalNavBar{
+    height: 35px;
+}
+.festivalNavBar span{
+    cursor: pointer;
+}
+.festivalNavBar-1{
+    font-weight: bold;
+}
+.festivalNavBar-2{
+    color: gray;
+    /* border-bottom: 1px solid gray; */
+}
+.festivalNavBar-3{
+    color: gray;
+    /* border-bottom: 1px solid gray; */
+}
+
+
+.festivalMenu{
+    display: flex;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid gray;
+}
+.festivalMenu span{
+    display: block;
+}
+.festivalMenu img {
+    background-color: gray;
+    width: 200px;
+    height: 250px;
+}
+
+.categoryFestival{
+    padding-bottom: 7px;
+    border-bottom: 5px solid #21517D;
+}
+
+.festivalContent{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.festivalContent h2{
+    text-align: center;
+    padding-bottom: 25px;
+}
+.festivalDateSearch{
+    display: flex;
+    float: right;
+}
+
+
+.festivalMenu-name1,.festivalMenu-name2,.festivalMenu-name3,.festivalMenu-name4{
+    font-weight: bold;
+}
+
+.festivalMenu-1,.festivalMenu-2,.festivalMenu-3,.festivalMenu-4{
+    width: 240px;
+    height: 300px;
+    cursor: pointer;
+}
+
+
+/* ------------------달력부트스트랩 CSS------------------------ */
+
+
+.container form {
+    width: 200px;
+}
+
+/* label {
+    font-size: 18px;
+}
+   */
+#calendarInput {
+      padding: 5px 10px !important;
+      border: 1px solid #CFD8DC !important;
+      border-radius: 4px !important;
+      box-sizing: border-box;
+      background-color: #fff !important;
+      color: #000 !important;
+      font-size: 13px !important;
+      letter-spacing: 1px;
+      position: relative;
+      width: 100%;
+}
+  
+#calendarInput:focus {
+      -moz-box-shadow: none !important;
+      -webkit-box-shadow: none !important;
+      box-shadow: none !important;
+      border: 1px solid #FFA000 !important;
+      outline-width: 0;
+}
+  
+.daterangepicker {
+    background-color: #fff;
+    border-radius: 0 !important;
+    align-content: center !important;
+    padding: 0 !important;
+}
+  
+  /*Weekday Heading*/
+thead tr:nth-child(2) {
+    color: #BDBDBD !important;
+}
+  
+tbody tr td {
+    padding: 5px 7px !important;
+}
+
+.month {
+    font-size: 16px !important;
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
+  
+.start-date, .end-date {
+    border-radius: 0px !important;
+}
+  
+.available:hover {
+    border-radius: 0px !important;
+}
+  
+.off {
+    color: #EEEEEE !important;
+}
+  
+.off:hover {
+    background-color: #EEEEEE !important;
+    color: #fff !important;
+}
+  
+.drp-buttons {
+    display: none !important;
+}
+
+.page-nation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 25px;
+    list-style: none;
+    color: gray;
+}
+.page-nation li{
+    font-size: 20px;
+
+    
+}
