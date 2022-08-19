@@ -1,6 +1,7 @@
 import interpark, melon, yes
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -8,7 +9,7 @@ if __name__ == '__main__':
     options = webdriver.ChromeOptions()
     options.add_argument("headless")
     options.add_experimental_option("excludeSwitches", ["enable-logging"])
-    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     # 각 사이트 크롤링 함수가 들어올 위치#
     # 중복이 있을 경우 먼저 실행하는 함수의 행사 정보가 저장 됩니다.
