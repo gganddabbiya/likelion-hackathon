@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,29 +33,30 @@
         </div>
         <div id="mainCategory">
             <a href=""style="text-decoration: none; color:#000000;"><span class="catogoryMain">HOME</span></a>
-            <a href="{{ }}" style="text-decoration: none; color:#000000;"><span class="categoryExhibition">EXHIBITION</span></a>
-            <a href="{% url %}" style="text-decoration: none; color:#000000;"><span class="categoryFestival">FESTIVAL</span></a>
+            <a href="" style="text-decoration: none; color:#000000;"><span class="categoryExhibition">EXHIBITION</span></a>
+            <a href="" style="text-decoration: none; color:#000000;"><span class="categoryFestival">FESTIVAL</span></a>
             <span class="categoryCategory" style="text-decoration:underline;  text-decoration-color:#21517D; text-decoration-thickness:3px;">COMMUNITY</span>
         </div>
     </header>
 
     <div id="community">
-        <a href="" id="community" style="text-decoration:none; color:#000000;">COMMUNITY</p>     
+        <a href="{% url 'home'%}" id="community" style="text-decoration:none; color:#000000;">COMMUNITY</p>     
     </div>
 
     <div id="category2">
         <nav>
             <ul class="nav-container2">
                 <li class="nav-item2"><a href=""style="color:#000000; text-decoration:none;">전체</a></li>
-                <li class="nav-item2"><a href="{{ freeposts_list }}">자유게시판</a></li>
-                <li class="nav-item2"><a href="{{ reviewposts_list }}">후기</a></li>
-                <li class="nav-item2"><a href="{{ withpost_list }}">같이가요&해요</a></li>
+                <li class="nav-item2"><a href="{% url 'freeposts_list' %}">자유게시판</a></li>
+                <li class="nav-item2"><a href="{% url 'reviewposts_list' %}">후기</a></li>
+                <li class="nav-item2"><a href="{% url 'withposts_list' %}">같이가요&해요</a></li>
             </ul>         
         </nav>   
     </div>
 
     <div id="form">
         <form action="" method="post">
+            {% csrf_token %}
             <div class="form-write">
                <div class="form-group">
                     <input type="text" class="form-control" id="title" placeholder="제목 입력(4-100)" name="title" maxlength="100" required="required" pattern=".{4,100}">
@@ -71,7 +73,7 @@
             </div>
             <div id="button">
                 <button type="button" class="btn btn-default" id="back-btn" style="background-color: #696969; color:white; margin-right:2%;">뒤로가기</button>
-                <input type="submit" class="btn btn-default2" style="color:white; background-color: #21517D;">업로드</button>
+                <input type="submit" class="btn btn-default2" style="color:white; background-color: #21517D;">업로드</input>
             </div> 
         </form>      
     </div>

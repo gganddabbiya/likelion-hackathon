@@ -17,7 +17,8 @@ def postcreate(request):
     # form 입력 html 띄우기
     else:
         form = PostForm()
-    return render(request, 'postForm.html', {'form': form})
+    return render(request, 'post/postForm.html', {'form': form})
+
 # 게시글 전체
 def home(request):
     posts = Post.objects.all()
