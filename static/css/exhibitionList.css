@@ -35,6 +35,7 @@
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid #21517D;
+
 }
 .exhibitionMenu span{
     display: block;
@@ -68,12 +69,17 @@
     font-weight: bold;
 }
 
-.exhibitionMenu-1,.exhibitionMenu-2,.exhibitionMenu-3,.exhibitionMenu-4{
+.exhibitionWrap{
     width: 240px;
     height: 300px;
     cursor: pointer;
 }
 
+.detail_link {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
 /* ------------------달력부트스트랩 CSS------------------------ */
 

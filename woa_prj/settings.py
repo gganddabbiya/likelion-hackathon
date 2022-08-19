@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'exhibition',
     'post',
 
+    'mathfilters',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',

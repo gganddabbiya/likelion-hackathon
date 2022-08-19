@@ -8,13 +8,19 @@ function movePage(page) {
 $("#calendarInput").on("propertychange change keyup paste input", function() {
     var date = $('#calendarInput').val();
 
-    var splitDate = date.split(' - ');
-    
-    var newStartDate = splitDate[0];
-    var newEndDate = splitDate[1];
-    
-    var url = window.location.href;
-    
-    url.searchParams.set('startDate', newStartDate);
-    url.searchParams.set('endDate', newEndDate);
+    var splitDate = date.split('-');
+
+    console.log(splitDate);
+    var newStartDate = splitDate[0].trim();
+    var newEndDate = splitDate[1].trim();
+
+    var url = "http://127.0.0.1:8000/exhibitions/?page=1"+"&startDate="+newStartDate+"&endDate="+newEndDate;
+
+    console.log(url);
+
+    window.location.href = url;
+
+    // url.searchParams.set('startDate', newStartDate);
+    // url.searchParams.set('endDate', newEndDate);
+
 });

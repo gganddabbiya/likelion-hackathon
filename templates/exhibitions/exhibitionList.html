@@ -1,3 +1,5 @@
+{% load static %}
+{% load mathfilters %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -68,118 +70,65 @@
                       </div>
                     </form>
                 </div>
-
-              
-              
-                
             </div>
         </div>
 
 
+        {% for exhibition in exhibition_list %}
+            {% if forloop.counter|mod:4 == 1 %}
+                {% if forloop.counter > 2 %}
+                    </div>
+                    {% endif %}
+            {% endif %}
+            {% if forloop.counter|mod:4 == 1 %}
+                <div class="exhibitionMenu">
+            {% endif %}
+                <div class="exhibitionWrap">
+                <a class="detail_link" href = "{% url 'exhibition_detail' exhibition.id %}">
+                    <img src="{{ exhibition.ex_image }}" alt="전시이미지-메뉴1">
+                    <span class="exhibitionMenu-name1">{{ exhibition.ex_title }}</span>
+{#                    <span class="exhibitionMenu-date1">{{ exhibition.ex_startDate }} ~ {{ exhibition.ex_endDate }}</span>#}
+{#                    <span class="exhibitionMenu-location1">{{ exhibition.ex_place }}</span>#}
+                    </a>
+                </div>
 
-        <div class="exhibitionMenu">
-                
-            <div class="exhibitionMenu-1">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴1">
-                <span class="exhibitionMenu-name1">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date1">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location1">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-2">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴2">
-                <span class="exhibitionMenu-name2">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date2">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location2">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-3">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴3">
-                <span class="exhibitionMenu-name3">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date3">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location3">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-4">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴4">
-                <span class="exhibitionMenu-name4">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date4">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionManu-location4">{{ ex_place }}</span>
-            </div>
+        {% endfor %}
         </div>
 
-        <div class="exhibitionMenu">
-                
-            <div class="exhibitionMenu-1">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴1">
-                <span class="exhibitionMenu-name1">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date1">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location1">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-2">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴2">
-                <span class="exhibitionMenu-name2">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date2">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location2">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-3">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴3">
-                <span class="exhibitionMenu-name3">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date3">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location3">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-4">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴4">
-                <span class="exhibitionMenu-name4">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date4">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionManu-location4">{{ ex_place }}</span>
-            </div>
-        </div>
 
-        <div class="exhibitionMenu" style="border: none;">
-                
-            <div class="exhibitionMenu-1">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴1">
-                <span class="exhibitionMenu-name1">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date1">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location1">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-2">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴2">
-                <span class="exhibitionMenu-name2">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date2">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location2">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-3">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴3">
-                <span class="exhibitionMenu-name3">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date3">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionMenu-location3">{{ ex_place }}</span>
-            </div>
-            <div class="exhibitionMenu-4">
-                <img src="{{ ex_img }}" alt="전시이미지-메뉴4">
-                <span class="exhibitionMenu-name4">{{ ex_name }}</span>
-                <span class="exhibitionMenu-date4">{{ ex_startDate }} ~ {{ ex_endDate }}</span>
-                <span class="exhibitionManu-location4">{{ ex_place }}</span>
-            </div>
-        </div>
 
         
         
 
     </div>
 
+{% if exhibition_list.has_previous %}
+<a href="?page=1">첫 페이지 </a>
+<a href="?page={{ exhibition_list.previous_page_number }}">이전 페이지</a>
+{% endif %}
+
+<span> {{ exhibition_list.number }} </span>
+<span> / </span>
+<span> {{ exhibition_list.paginator.num_pages }} </span>
+
+{% if exhibition_list.has_next %}
+<a href="?page={{ exhibition_list.next_page_number }}">다음 페이지 </a>
+<a href="?page={{ exhibition_list.paginator.num_pages }}">마지막 페이지</a>
+{% endif %}
     
-
-    <div class="page-wrap">
-        <ul class="page-nation">
-            <li onclick="movePage(1)">1</li>
-            <li onclick="movePage(2)">2</li>
-            <li onclick="movePage(3)">3</li>
-            <li onclick="movePage(4)">4</li>
-            <li onclick="movePage(5)">5</li>
-            <li onclick="movePage(6)">6</li>
-            <li onclick="movePage(7)">7</li>
-            <li onclick="movePage(8)">8</li>
-        </ul>
-    </div>
+{##}
+{#    <div class="page-wrap">#}
+{#        <ul class="page-nation">#}
+{#            <li onclick="movePage(1)">1</li>#}
+{#            <li onclick="movePage(2)">2</li>#}
+{#            <li onclick="movePage(3)">3</li>#}
+{#            <li onclick="movePage(4)">4</li>#}
+{#            <li onclick="movePage(5)">5</li>#}
+{#            <li onclick="movePage(6)">6</li>#}
+{#            <li onclick="movePage(7)">7</li>#}
+{#            <li onclick="movePage(8)">8</li>#}
+{#        </ul>#}
+{#    </div>#}
 
 
 
@@ -187,8 +136,8 @@
         <div>by.멋쟁이 사자처럼 상명대학교 아기사자들</div>
     </footer>
 
-    <script src="{% static js/calendar.js %}"></script>
-    <script src="{% static js/exhibitionArray.js %}"></script>
-    <script src="{% static js/urlChange.js %}"></script>
+    <script src="{% static 'js/calendar.js' %}"></script>
+    <script src="{% static 'js/exhibitionArray.js' %}"></script>
+    <script src="{% static 'js/urlChange.js' %}"></script>
 </body>
 </html>

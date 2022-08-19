@@ -22,4 +22,5 @@ urlpatterns = [
     path('exhibitions/', include("exhibition.urls")),
     path('festivals/', include("festival.urls")),
     path('accounts/', include('allauth.urls')),
+    # path('',)
 ]
