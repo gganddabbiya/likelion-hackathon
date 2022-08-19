@@ -1,0 +1,90 @@
+header{
+    /* 헤더 상단 고정 
+    position: fixed;
+    width: 100%; */
+     margin-top: 1%; 
+} 
+
+/* 검색바 */
+.logoAndSearch {
+    padding-bottom: 0.5%;
+    text-align: center;
+}
+
+#logoImg {
+    width: 100px;
+}
+
+.dropdown {
+    display: inline-flex;
+    /* margin-left: 5%; */
+    margin-top: 2%;
+    width: 40vw;
+    height: 40px;
+}
+
+/* 메인 메뉴바 */
+.mainCategory {
+    padding: 0.5%;
+    text-align: center;
+    word-spacing: 6vw;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    display: flex;
+
+    list-style-type: none;
+    color: black;
+
+    margin-left: 28.5%;
+}
+
+.categoryExhibition{
+    margin-left: 10%;
+}
+
+.categoryFestival{
+    margin-left: 10%;
+}
+
+.categoryCategory{
+    margin-left: 10%;
+}
+
+.mainCategory li{
+    list-style: none;
+}
+
+.mainCategory a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 글쓰기 비밀번호를 입력해주세요 */
+.input_txt{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 8%;
+}
+.input{
+    margin-left: 35%;
+    margin-top: 2%;
+    display: inline-block;
+}
+
+.check{
+    background-color: #21517D;
+    border: none;
+    color: white;
+    text-align: center;
+    width: 55px;
+    height: 28px;
+
+    display: inline-block;
+
+    margin-left: 0.3%;
+
+    cursor: pointer;
+}
