@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .forms import PostForm, CommentForm, FreePostForm, FreeCommentForm
-from .models import Post, FreePost
+from .forms import PostForm, CommentForm
+from .models import Post
 from django.core.paginator import Paginator
 
 # postcreate
