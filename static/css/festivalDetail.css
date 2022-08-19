@@ -97,21 +97,22 @@ header{
 }
 
 /* 공유하기 버튼 */
+.share_box{
+    border-bottom: 2px solid black;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .share{
     display: flex;
     
-    margin-left: 30%;
+    margin-left: 12%;
     margin-top: auto;
     color: black;
 }
 
 .share li{
     cursor: pointer;
-}
-
-.share #mail_share{
-    margin-top: 0.6%;
-    margin-left: 3%;
 }
 
 .share #link_share{
@@ -121,7 +122,7 @@ header{
 
 .share #detail_web{
     margin-top: 0.4%;
-    margin-left: 3%;
+    margin-left: 30%;
 }
 
 .share img{
@@ -130,6 +131,7 @@ header{
 
 .detail_info{
     margin-left: 30%;
+    margin-top: 2%;
 }
 
 .detail_img{
